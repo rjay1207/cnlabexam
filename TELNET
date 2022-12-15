@@ -1,0 +1,26 @@
+Telnet:
+TELNET (Terminal Network (or)Teletype Network) is the service that allows you to
+access another computer by logging in to the remote system, such that, you can pass
+commands to another system by sitting back at your place. It allows you to send the
+instructions to a remote client, but in a plain-text format. Telnet listens to all the
+requests by the user usually on TCP port 23.
+Installation of Telnet:
+Step 1: sudo apt-get install telnetd
+This will complete the installation of Telnet. “telnetd” is a daemon that gets invoked
+by “inetd” or its extension “xinetd”, both are the internet servers.
+Step 2:
+Then you are asked to enter the user password and then press enter. Processing will
+start as soon as you press enter. After this, I have noticed a line “274 KB additional
+disk space will be used” on the terminal screen.
+You may also observe some sort of a message like this and then you”ll be asked to
+continue or not. Just write “y” and then press enter to continue.
+Step 3: Now when you are done with it, restart “inetd”. Type “sudo
+/etc/init.d.open-bsd-inetd restart”.
+“inetd” is daemon used for dealing with incoming network and it is responsible for
+deciding which program to run when a request comes.
+Step 4: To ensure “inetd” is started, press enter after writing the above command.
+To connect with any remote client:
+Step 5: Just type:“telnet hostipaddress”. For an example: “telnet 192.168.0.68” and
+press enter.
+Step 6: Then you”ll see, it is connected to “host ip address”. For security reasons,
+you are required to provide “username” and “password” as well.
